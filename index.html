@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260723-05-e9a76f4"}');</script><script src="/_sdk/e358eac22bd01364.telemetry_sdk.js" integrity="sha512-KPxp3rw4K8Nu9ceWJc3gyM7srgaZxiFWOVbyu260EYzzAqdz10mfo5xyXrCx+wEKtGo77JbtmwXvFLbwrGzwvw=="></script> <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Nerd</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/935a53bc2e11fb8d.data_sdk.js" integrity="sha512-qr2oyPnEys1WebcOABaRh6hG77r5PWpqeWW6JTKbRJqly/INsfBi31CVNlTmHqjgeLpkVmmHZJUdxSx/32tOFQ=="></script>
+  <script src="/_sdk/c939c145c3c74230.editing_sdk.js" integrity="sha512-jh2pv/gl9Gzzn5dxfzwQO4wkqtnAQIim+LIUDYfVu2cdqPkQV2MqbjsDUW5IYbrSZFjRlOBrIWzlvWDXQYxOjg=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="/_sdk/6030e540d4419216.resizing_sdk.js" type="text/javascript" integrity="sha512-b5KWzyoXsbWP4smq4sftIi6Kts4YVBpBsz0BwCViwbBJkK64a3/Z6ZMdWA+qnplNcXw4mhZeqvQi3mOosiRJdA=="></script>
+ </head>
+ <body data-template-id="__page-root">
+  <div class="app-shell w-full">
+   <header class="w-full border-b border-white/10">
+<div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+      
+      <!-- LADO ESQUERDO: Logo e Título juntos -->
+      <div class="flex items-center gap-3">
+       <img src="Icon-192.png" alt="Logo AMCN" class="h-10 w-10 rounded-xl object-cover">
+       <p data-template-id="brand-name" class="canva-text brand-type font-bold tracking-tight">REGISTRO NERD</p>
+      </div> 
+      <!-- Fim do lado esquerdo -->
+
+      <!-- LADO DIREITO: Fica sozinho fora do grupo para ser empurrado -->
+      <p data-template-id="header-badge" class="canva-tag rounded-full border border-lime-300/25 px-3 py-1.5 text-center font-semibold">COMUNIDADE ONLINE</p>
+      
+    </div>
+   </header>
+   <main class="mx-auto w-full max-w-7xl px-5 py-8 md:px-8 md:py-12">
+    <section id="welcome-section" aria-labelledby="welcome-title" class="mb-12 overflow-hidden rounded-[28px] border border-white/10 reveal">
+     <div class="glass-panel p-6 text-center sm:p-9 lg:p-16">
+      <h2 id="welcome-title" data-template-id="welcome-title" class="canva-text brand-type font-bold tracking-tight text-5xl">Bem vindo a AMCN</h2>></h2><button id="enter-button" data-template-id="enter-button" class="canva-button primary-button focusable mt-8 rounded-xl px-8 py-4 font-bold" type="button"> INSCREVA-SE</button>
+     </div>
+    </section>
+    <section id="form-section" aria-labelledby="page-title" class="hidden grid overflow-hidden rounded-[28px] border border-white/10 lg:grid-cols-[1.05fr_.95fr] reveal">
+     <div data-template-id="form-panel" class="canva-panel glass-panel p-6 sm:p-9 lg:p-12">
+      <div class="mb-8 max-w-xl">
+       <p data-template-id="eyebrow" class="canva-tag mb-4 inline-flex rounded-full border px-3 py-1.5 font-bold uppercase tracking-widest">NOVO MEMBRO</p>
+       <h1 id="page-title" data-template-id="page-title" class="canva-text brand-type font-bold leading-[1.08] tracking-tight">Junte-se à AMCN</h1>
+       <p data-template-id="page-subtitle" class="canva-text mt-4 max-w-lg leading-relaxed"></p>
+      </div>
+      <form id="registration-form" novalidate class="space-y-5">
+       <div>
+        <label data-template-id="name-label" class="canva-text mb-2 block font-semibold" for="nome">Nome Completo</label>
+        <div class="relative">
+         <i data-lucide="user-round" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <input data-template-id="name-input" class="canva-input field pl-12" id="nome" name="nome" type="text" autocomplete="name" maxlength="80" required>
+        </div>
+       </div>
+       <div>
+        <label data-template-id="birth-label" class="canva-text mb-2 block font-semibold" for="data-nascimento">Data de Nascimento</label>
+        <div class="relative">
+         <i data-lucide="calendar-days" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <input class="field pl-12" id="data-nascimento" name="data_nascimento" type="date" autocomplete="bday" required>
+        </div>
+       </div>
+       <div>
+        <label data-template-id="area-label" class="canva-text mb-2 block font-semibold" for="area-nerd">Seu seguimento Nerd</label>
+        <div class="relative">
+         <i data-lucide="sparkles" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <select class="field appearance-none pl-12 pr-12" id="area-nerd" name="area_nerd" required> <option value="">Selecione uma área</option> <option value="Games">Games</option> <option value="Anime e mangá">Anime e mangá</option> <option value="Cinema e séries">Cinema e séries</option> <option value="Quadrinhos">Quadrinhos</option> <option value="Kpop">Kpop</option> <option value="RPG e boardgame">RPG e boardgame</option> <option value="Cosplay">Cosplay</option> <option value="Colecionáveis">Colecionáveis</option> <option value="Outra área">Outra área</option> </select> <i data-lucide="chevron-down" aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i>
+        </div>
+       </div>
+       <div id="validation-message" class="message items-start gap-2 rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-amber-100" role="alert">
+        <i data-lucide="circle-alert" aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0"></i> <span data-template-id="validation-text" class="canva-text"></span>
+       </div>
+       <div id="error-message" class="message items-start gap-2 rounded-xl border border-red-400/25 bg-red-400/10 px-4 py-3 text-red-100" role="alert">
+        <i data-lucide="wifi-off" aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0"></i> <span data-template-id="error-text" class="canva-text"></span>
+       </div>
+       <div id="success-message" class="message items-start gap-2 rounded-xl border border-lime-300/25 bg-lime-300/10 px-4 py-3 text-lime-100" role="status" aria-live="polite">
+        <i data-lucide="circle-check" aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0"></i> <span data-template-id="success-text" class="canva-text">Cadastro realizado com sucesso!</span>
+       </div><button id="submit-button" data-template-id="submit-button" class="canva-button primary-button focusable flex w-full items-center justify-center gap-2 rounded-xl px-5 py-4 font-bold" type="submit"> <span class="submit-idle flex items-center gap-2"> <i data-lucide="zap" aria-hidden="true" class="h-5 w-5"></i> <span data-template-id="submit-idle-text" class="canva-text">Cadastrar</span> </span> <span class="submit-loading hidden items-center gap-2"> <i data-lucide="loader-circle" aria-hidden="true" class="h-5 w-5 animate-spin"></i> <span data-template-id="submit-loading-text" class="canva-text"></span> </span> </button>
+       <p data-template-id="privacy-note" class="canva-text flex items-start gap-2 leading-relaxed"><i data-lucide="shield-check" aria-hidden="true" class="mt-0.5 h-4 w-4 shrink-0"></i></p>
+      </form>
+     </div>
+     <div class="hero-image relative min-w-0 overflow-hidden">
+      <img data-template-id="hero-image" class="canva-image absolute inset-0 h-full w-full object-cover" loading="lazy">
+      <div class="image-shade absolute inset-0" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 bottom-0 p-6 sm:p-9">
+       <div class="mb-4 flex gap-2" aria-hidden="true">
+        <span class="h-2 w-14 rounded-full bg-lime-300"></span> <span class="h-2 w-2 rounded-full bg-cyan-300"></span> <span class="h-2 w-2 rounded-full bg-fuchsia-400"></span>
+
+<div class="relative w-full h-full min-h-[600px] rounded-[28px] overflow-hidden border border-white/10 group">
+  
+  <!-- 1. Imagens do Carrossel (Links 100% funcionais) -->
+  <div id="event-carousel" class="absolute inset-0 w-full h-full">
+    <!-- Slide 1 (Setup Games) -->
+    <div class="carousel-item absolute inset-0 w-full h-full opacity-100 transition-opacity duration-700 ease-in-out">
+      <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=1600&q=80" alt="Games" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Slide 2 (Neon/Anime vibes) -->
+    <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-700 ease-in-out">
+      <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?auto=format&fit=crop&w=1600&q=80" alt="Cultura Pop" class="w-full h-full object-cover">
+    </div>
+    
+    <!-- Slide 3 (Colecionáveis) -->
+    <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-700 ease-in-out">
+      <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=1600&q=80" alt="Comics" class="w-full h-full object-cover">
+    </div>
+  </div>
+
+  <!-- 2. Sombra escura no fundo para dar leitura -->
+  <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] via-[#1A1A2E]/80 to-transparent"></div>
+
+  <!-- 3. Texto Principal e Pontinhos na parte de baixo -->
+  <div class="absolute bottom-0 left-0 p-8 md:p-12 z-20 w-full">
+    <h2 class="canva-text brand-type font-bold tracking-tight text-white text-4xl md:text-5xl mb-6 max-w-2xl">
+      Toda paixão tem uma história. Qual é a sua?
+    </h2>
+    
+    <!-- Pontinhos coloridos alinhados com o parágrafo -->
+    <div class="flex flex-col md:flex-row md:items-center gap-4">
+      <div class="flex gap-2">
+        <div class="h-2 w-8 rounded-full" style="background-color: var(--lime);"></div>
+        <div class="h-2 w-2 rounded-full" style="background-color: var(--purple);"></div>
+      </div>
+      <p class="text-white/80 max-w-xl text-lg leading-relaxed m-0">
+        Games, anime, tecnologia, quadrinhos ou galáxias muito distantes: há espaço para todos.
+      </p>
+    </div>
+  </div>
+
+  <!-- 4. Controles (Setas e Bolinhas) -->
+  <button id="carousel-prev" class="absolute top-1/2 left-4 z-30 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
+    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+  </button>
+  <button id="carousel-next" class="absolute top-1/2 right-4 z-30 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
+    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+  </button>
+
+  <div class="carousel-indicators absolute bottom-12 right-12 z-30 flex items-center gap-2">
+    <div class="indicator w-2.5 h-2.5 rounded-full bg-white transition-all duration-300"></div>
+    <div class="indicator w-2.5 h-2.5 rounded-full bg-white/40 transition-all duration-300"></div>
+    <div class="indicator w-2.5 h-2.5 rounded-full bg-white/40 transition-all duration-300"></div>
+  </div>
+</div>
+      </div>
+     </div>
+    </section>
+    <section id="records-section" class="hidden" aria-labelledby="records-title">
+     <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
+       <p data-template-id="records-eyebrow" class="canva-text mb-2 font-bold uppercase tracking-widest">NOSSA PARTY</p>
+       <h2 id="records-title" data-template-id="records-title" class="canva-text brand-type font-bold">Comunidade registrada</h2>
+      </div>
+      <div class="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
+       <i data-lucide="users" aria-hidden="true" class="h-4 w-4 text-cyan-300"></i> <span id="record-count" class="font-bold text-white" aria-live="polite">0</span> <span data-template-id="count-label" class="canva-text">pessoas</span>
+      </div>
+     </div>
+     <div id="empty-state" data-template-id="empty-state-panel" class="canva-panel rounded-2xl border border-dashed p-8 text-center">
+      <div class="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-full bg-white/5 text-slate-400" aria-hidden="true">
+       <i data-lucide="satellite-dish" class="h-6 w-6"></i>
+      </div>
+      <h3 data-template-id="empty-title" class="canva-text font-bold">A party ainda está vazia</h3>
+      <p data-template-id="empty-description" class="canva-text mx-auto mt-2 max-w-md">Preencha o formulário acima para criar o primeiro perfil desta comunidade.</p>
+     </div>
+     <div id="record-list" class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3" aria-live="polite"></div>
+    </section>
+   </main>
+   <footer class="border-t border-white/10">
+    <div class="mx-auto flex w-full max-w-7xl flex-col gap-2 px-5 py-6 text-sm sm:flex-row sm:items-center sm:justify-between md:px-8">
+     <p data-template-id="footer-text" class="canva-text">Feito para reunir todos os seguimentos da cultura nerd</p>
+     <p data-template-id="footer-accent" class="canva-text brand-type font-bold">Js.artis</p>
+    </div>
+   </footer>
+  </div>
+  <template id="record-template">
+   <article data-template-id="record-card" class="canva-card record-card rounded-2xl p-5">
+    <div class="flex items-start justify-between gap-4">
+     <div class="min-w-0">
+      <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-lime-300/10 text-lime-300" aria-hidden="true">
+       <i data-lucide="user-round" class="h-5 w-5"></i>
+      </div>
+      <h3 data-template-id="record-name" class="canva-text truncate font-bold"></h3>
+     </div><span data-template-id="record-area" class="canva-tag area-chip max-w-[55%] rounded-full px-3 py-1 text-right font-semibold"></span>
+    </div>
+    <dl class="mt-5 space-y-3 border-t border-white/10 pt-4">
+     <div class="flex items-center justify-between gap-4">
+      <dt data-template-id="birth-card-label" class="canva-text"></dt>
+      <dd data-template-id="record-birth" class="canva-text text-right font-semibold"></dd>
+     </div>
+     <div class="flex items-center justify-between gap-4">
+      <dt data-template-id="joined-card-label" class="canva-text"></dt>
+      <dd data-template-id="record-created" class="canva-text text-right"></dd>
+     </div>
+    </dl>
+    <div class="delete-zone mt-5">
+     <button data-template-id="delete-button" type="button" class="canva-button default-delete focusable flex w-full items-center justify-center gap-2 rounded-xl border border-red-400/20 bg-red-400/10 px-4 py-2.5 font-semibold text-red-200 hover:bg-red-400/20"> <i data-lucide="trash-2" aria-hidden="true" class="h-4 w-4"></i> </button>
+     <div class="confirm-actions gap-2">
+      <button data-template-id="confirm-delete-button" type="button" class="canva-button focusable flex-1 rounded-xl bg-red-500 px-3 py-2.5 font-bold text-white hover:bg-red-400"></button> <button data-template-id="cancel-delete-button" type="button" class="canva-button focusable flex-1 rounded-xl border border-white/15 bg-white/5 px-3 py-2.5 font-semibold text-white hover:bg-white/10"></button>
+     </div>
+    </div>
+   </article>
+  </template>
+  <script src="app.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+ </body>
+</html>
