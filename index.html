@@ -32,7 +32,7 @@
    <main class="mx-auto w-full max-w-7xl px-5 py-8 md:px-8 md:py-12">
     <section id="welcome-section" aria-labelledby="welcome-title" class="mb-12 overflow-hidden rounded-[28px] border border-white/10 reveal">
      <div class="glass-panel p-6 text-center sm:p-9 lg:p-16">
-      <h2 id="welcome-title" data-template-id="welcome-title" class="canva-text brand-type font-bold tracking-tight text-5xl">Bem vindo a AMCN</h2>></h2><button id="enter-button" data-template-id="enter-button" class="canva-button primary-button focusable mt-8 rounded-xl px-8 py-4 font-bold" type="button"> INSCREVA-SE</button>
+      <h2 id="welcome-title" data-template-id="welcome-title" class="canva-text brand-type font-bold tracking-tight text-5xl">Bem vindo a AMCN</h2></h2><button id="enter-button" data-template-id="enter-button" class="canva-button primary-button focusable mt-8 rounded-xl px-8 py-4 font-bold" type="button"> INSCREVA-SE</button>
      </div>
     </section>
     <section id="form-section" aria-labelledby="page-title" class="hidden grid overflow-hidden rounded-[28px] border border-white/10 lg:grid-cols-[1.05fr_.95fr] reveal">
@@ -76,67 +76,22 @@
      <div class="hero-image relative min-w-0 overflow-hidden">
       <img data-template-id="hero-image" class="canva-image absolute inset-0 h-full w-full object-cover" loading="lazy">
       <div class="image-shade absolute inset-0" aria-hidden="true"></div>
-      <div class="absolute inset-x-0 bottom-0 p-6 sm:p-9">
-       <div class="mb-4 flex gap-2" aria-hidden="true">
-        <span class="h-2 w-14 rounded-full bg-lime-300"></span> <span class="h-2 w-2 rounded-full bg-cyan-300"></span> <span class="h-2 w-2 rounded-full bg-fuchsia-400"></span>
-
-<div class="relative w-full h-full min-h-[600px] rounded-[28px] overflow-hidden border border-white/10 group">
-  
-  <!-- 1. Imagens do Carrossel (Links 100% funcionais) -->
-  <div id="event-carousel" class="absolute inset-0 w-full h-full">
-    <!-- Slide 1 (Setup Games) -->
-    <div class="carousel-item absolute inset-0 w-full h-full opacity-100 transition-opacity duration-700 ease-in-out">
-      <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=1600&q=80" alt="Games" class="w-full h-full object-cover">
-    </div>
-    
-    <!-- Slide 2 (Neon/Anime vibes) -->
-    <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-700 ease-in-out">
-      <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?auto=format&fit=crop&w=1600&q=80" alt="Cultura Pop" class="w-full h-full object-cover">
-    </div>
-    
-    <!-- Slide 3 (Colecionáveis) -->
-    <div class="carousel-item absolute inset-0 w-full h-full opacity-0 transition-opacity duration-700 ease-in-out">
-      <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=1600&q=80" alt="Comics" class="w-full h-full object-cover">
-    </div>
-  </div>
-
-  <!-- 2. Sombra escura no fundo para dar leitura -->
-  <div class="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] via-[#1A1A2E]/80 to-transparent"></div>
-
-  <!-- 3. Texto Principal e Pontinhos na parte de baixo -->
-  <div class="absolute bottom-0 left-0 p-8 md:p-12 z-20 w-full">
-    <h2 class="canva-text brand-type font-bold tracking-tight text-white text-4xl md:text-5xl mb-6 max-w-2xl">
-      Toda paixão tem uma história. Qual é a sua?
-    </h2>
-    
-    <!-- Pontinhos coloridos alinhados com o parágrafo -->
-    <div class="flex flex-col md:flex-row md:items-center gap-4">
-      <div class="flex gap-2">
-        <div class="h-2 w-8 rounded-full" style="background-color: var(--lime);"></div>
-        <div class="h-2 w-2 rounded-full" style="background-color: var(--purple);"></div>
-      </div>
-      <p class="text-white/80 max-w-xl text-lg leading-relaxed m-0">
-        Games, anime, tecnologia, quadrinhos ou galáxias muito distantes: há espaço para todos.
-      </p>
-    </div>
-  </div>
-
-  <!-- 4. Controles (Setas e Bolinhas) -->
-  <button id="carousel-prev" class="absolute top-1/2 left-4 z-30 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
-    <i data-lucide="chevron-left" class="w-6 h-6"></i>
-  </button>
-  <button id="carousel-next" class="absolute top-1/2 right-4 z-30 -translate-y-1/2 p-3 bg-white/10 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
-    <i data-lucide="chevron-right" class="w-6 h-6"></i>
-  </button>
-
-  <div class="carousel-indicators absolute bottom-12 right-12 z-30 flex items-center gap-2">
-    <div class="indicator w-2.5 h-2.5 rounded-full bg-white transition-all duration-300"></div>
-    <div class="indicator w-2.5 h-2.5 rounded-full bg-white/40 transition-all duration-300"></div>
-    <div class="indicator w-2.5 h-2.5 rounded-full bg-white/40 transition-all duration-300"></div>
-  </div>
-</div>
-      </div>
-     </div>
+      <!-- Nova caixa organizada: Título -> Parágrafo -> Bolinhas -->
+      <div class="relative inset-x-0 bottom-0 p-8 md:p-12 z-20 flex flex-col justify-end min-h-[400px]">
+        
+        <h2 class="canva-text brand-type font-bold tracking-tight text-white text-4xl md:text-5xl mb-4 max-w-2xl">
+          Toda paixão tem uma história. Qual é a sua?
+        </h2>
+        
+        <p class="text-white/80 text-lg leading-relaxed max-w-xl mb-6">
+          Games, anime, tecnologia, quadrinhos ou galáxias muito distantes: há espaço para todos.
+        </p>
+        
+        <div class="flex gap-2" aria-hidden="true">
+          <span class="h-2 w-14 rounded-full bg-lime-300"></span>
+          <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
+          <span class="h-2 w-2 rounded-full bg-fuchsia-400"></span>
+        </div>
     </section>
     <section id="records-section" class="hidden" aria-labelledby="records-title">
      <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
