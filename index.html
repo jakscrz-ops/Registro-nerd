@@ -42,7 +42,7 @@
        <h1 id="page-title" data-template-id="page-title" class="canva-text brand-type font-bold leading-[1.08] tracking-tight">Junte-se à AMCN</h1>
        <p data-template-id="page-subtitle" class="canva-text mt-4 max-w-lg leading-relaxed"></p>
       </div>
-      <form id="registration-form" novalidate class="space-y-5">
+      <form id="registration-form" class="space-y-5">
        <div>
         <label data-template-id="name-label" class="canva-text mb-2 block font-semibold" for="nome">Nome Completo</label>
         <div class="relative">
@@ -60,6 +60,17 @@
         <div class="relative">
          <i data-lucide="sparkles" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <select class="field appearance-none pl-12 pr-12" id="area-nerd" name="area_nerd" required> <option value="">Selecione uma área</option> <option value="Games">Games</option> <option value="Anime e mangá">Anime e mangá</option> <option value="Cinema e séries">Cinema e séries</option> <option value="Quadrinhos">Quadrinhos</option> <option value="Kpop">Kpop</option> <option value="RPG e boardgame">RPG e boardgame</option> <option value="Cosplay">Cosplay</option> <option value="Colecionáveis">Colecionáveis</option> <option value="Outra área">Outra área</option> </select> <i data-lucide="chevron-down" aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i>
         </div>
+        <!-- Caixinha de Termos de Uso -->
+       <div class="flex items-start gap-3 mt-2">
+        <div class="flex h-6 items-center">
+         <input id="termos" name="termos" type="checkbox" required class="h-4 w-5 rounded border-white/20 bg-white/5 accent-lime-400 cursor-pointer">
+        </div>
+        <div class="text-sm leading-6">
+         <label for="termos" class="canva-text font-medium text-white/80 cursor-pointer">
+          Concordo com os <a href="#" class="text-lime-300 hover:underline">termos de uso</a> e aceito o armazenamento e uso dos meus dados.
+         </label>
+        </div>
+       </div>
        </div>
        <div id="validation-message" class="message items-start gap-2 rounded-xl border border-amber-400/25 bg-amber-400/10 px-4 py-3 text-amber-100" role="alert">
         <i data-lucide="circle-alert" aria-hidden="true" class="mt-0.5 h-5 w-5 shrink-0"></i> <span data-template-id="validation-text" class="canva-text"></span>
@@ -116,7 +127,7 @@
    <footer class="border-t border-white/10">
     <div class="mx-auto flex w-full max-w-7xl flex-col gap-2 px-5 py-6 text-sm sm:flex-row sm:items-center sm:justify-between md:px-8">
      <p data-template-id="footer-text" class="canva-text">Feito para reunir todos os seguimentos da cultura nerd</p>
-     <p data-template-id="footer-accent" class="canva-text brand-type font-bold">Js.artis</p>
+     <p data-template-id="footer-accent" class="canva-text brand-type font-bold"><a href="#" class="text-lime-300 hover:underline">Js.artis</a></p>
     </div>
    </footer>
   </div>
