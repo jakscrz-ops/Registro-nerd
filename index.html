@@ -16,17 +16,11 @@
   <div class="app-shell w-full">
    <header class="w-full border-b border-white/10">
 <div class="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
-      
-      <!-- LADO ESQUERDO: Logo e Título juntos -->
       <div class="flex items-center gap-3">
        <img src="Icon-192.png" alt="Logo AMCN" class="h-10 w-10 rounded-xl object-cover">
        <p data-template-id="brand-name" class="canva-text brand-type font-bold tracking-tight">REGISTRO NERD</p>
       </div> 
-      <!-- Fim do lado esquerdo -->
-
-      <!-- LADO DIREITO: Fica sozinho fora do grupo para ser empurrado -->
       <p data-template-id="header-badge" class="canva-tag rounded-full border border-lime-300/25 px-3 py-1.5 text-center font-semibold">COMUNIDADE ONLINE</p>
-      
     </div>
    </header>
    <main class="mx-auto w-full max-w-7xl px-5 py-8 md:px-8 md:py-12">
@@ -35,7 +29,7 @@
       <h2 id="welcome-title" data-template-id="welcome-title" class="canva-text brand-type font-bold tracking-tight text-5xl">Bem vindo a AMCN</h2></h2><button id="enter-button" data-template-id="enter-button" class="canva-button primary-button focusable mt-8 rounded-xl px-8 py-4 font-bold" type="button"> INSCREVA-SE</button>
      </div>
     </section>
-    <section id="form-section" aria-labelledby="page-title" class="hidden grid overflow-hidden rounded-[28px] border border-white/10 lg:grid-cols-[1.05fr_.95fr] reveal">
+   <section id="form-section" aria-labelledby="page-title" class="hidden mx-auto max-w-3xl overflow-hidden rounded-[28px] border border-white/10 reveal flex flex-col">
      <div data-template-id="form-panel" class="canva-panel glass-panel p-6 sm:p-9 lg:p-12">
       <div class="mb-8 max-w-xl">
        <p data-template-id="eyebrow" class="canva-tag mb-4 inline-flex rounded-full border px-3 py-1.5 font-bold uppercase tracking-widest">NOVO MEMBRO</p>
@@ -95,8 +89,7 @@
       <img data-template-id="hero-image" class="canva-image absolute inset-0 h-full w-full object-cover" loading="lazy">
       <div class="image-shade absolute inset-0" aria-hidden="true"></div>
       <!-- Nova caixa organizada: Título -> Parágrafo -> Bolinhas -->
-      <div class="relative inset-x-0 bottom-0 p-8 md:p-12 z-20 flex flex-col justify-end min-h-[400px]">
-        
+      <div class="relative inset-x-0 bottom-0 p-8 md:p-12 z-20 flex flex-col items-center text-center justify-center min-h-[400px]">
         <h2 class="canva-text brand-type font-bold tracking-tight text-white text-4xl md:text-5xl mb-4 max-w-2xl">
           Toda paixão tem uma história. Qual é a sua?
         </h2>
@@ -105,11 +98,13 @@
           Games, anime, tecnologia, quadrinhos ou galáxias muito distantes: há espaço para todos.
         </p>
         
-        <div class="flex gap-2" aria-hidden="true">
+        <div class="flex justify-center gap-2 mt-4" aria-hidden="true">
           <span class="h-2 w-14 rounded-full bg-lime-300"></span>
           <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
           <span class="h-2 w-2 rounded-full bg-fuchsia-400"></span>
         </div>
+        </div> 
+     </div>
     </section>
     <section id="records-section" class="hidden" aria-labelledby="records-title">
      <div class="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
