@@ -54,11 +54,18 @@
         <div class="relative">
          <i data-lucide="calendar-days" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <input class="field pl-12" id="data-nascimento" name="data_nascimento" type="date" autocomplete="bday" required>
         </div>
+        <!-- Campo de CPF -->
+       <div>
+        <label data-template-id="cpf-label" class="canva-text mb-2 block font-semibold" for="cpf">CPF</label>
+        <div class="relative">
+         <i data-lucide="id-card" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> 
+         <input class="field pl-12 canva-input" id="cpf" name="cpf" type="text" placeholder="000.000.000-00" required>
+        </div>
        </div>
        <div>
         <label data-template-id="area-label" class="canva-text mb-2 block font-semibold" for="area-nerd">Seu seguimento Nerd</label>
         <div class="relative">
-         <i data-lucide="sparkles" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <select class="field appearance-none pl-12 pr-12" id="area-nerd" name="area_nerd" required> <option value="">Selecione uma área</option> <option value="Games">Games</option> <option value="Anime e mangá">Anime e mangá</option> <option value="Cinema e séries">Cinema e séries</option> <option value="Quadrinhos">Quadrinhos</option> <option value="Kpop">Kpop</option> <option value="RPG e boardgame">RPG e boardgame</option> <option value="Cosplay">Cosplay</option> <option value="Colecionáveis">Colecionáveis</option> <option value="Outra área">Outra área</option> </select> <i data-lucide="chevron-down" aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i>
+         <i data-lucide="sparkles" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <select class="field appearance-none pl-12 pr-12" id="area-nerd" name="area_nerd" required> <option value="">Selecione uma área</option> <option value="E-Games">E-Games</option> <option value="Anime e mangá">Anime e mangá</option> <option value="Cinema e séries">Cinema e séries</option> <option value="Quadrinhos">Quadrinhos</option> <option value="Kpop">Kpop</option> <option value="RPG e boardgame">RPG e boardgame</option> <option value="Cosplay">Cosplay</option> <option value="Colecionáveis">Colecionáveis</option> <option value="Outra área">Outra área</option> </select> <i data-lucide="chevron-down" aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i>
         </div>
         <!-- Caixinha de Termos de Uso -->
        <div class="flex items-start gap-3 mt-2">
@@ -66,9 +73,9 @@
          <input id="termos" name="termos" type="checkbox" required class="h-4 w-5 rounded border-white/20 bg-white/5 accent-lime-400 cursor-pointer">
         </div>
         <div class="text-sm leading-6">
-         <label for="termos" class="canva-text font-medium text-white/80 cursor-pointer">
-          Concordo com os <a href="#" class="text-lime-300 hover:underline">termos de uso</a> e aceito o armazenamento dos meus dados.
-         </label>
+        <label for="termos" class="canva-text font-medium text-white/80 cursor-pointer">
+           Concordo com os <button type="button" id="abrir-termos" class="text-lime-300 hover:underline">termos de uso</button> e aceito o armazenamento dos meus dados.
+        </label>
         </div>
        </div>
        </div>
@@ -142,6 +149,9 @@
      </div><span data-template-id="record-area" class="canva-tag area-chip max-w-[55%] rounded-full px-3 py-1 text-right font-semibold"></span>
     </div>
     <dl class="mt-5 space-y-3 border-t border-white/10 pt-4">
+      <div class="flex items-center justify-between gap-4">
+      <dt class="canva-text">CPF</dt>
+      <dd data-template-id="record-cpf" class="canva-text text-right font-mono font-semibold"></dd>
      <div class="flex items-center justify-between gap-4">
       <dt data-template-id="birth-card-label" class="canva-text"></dt>
       <dd data-template-id="record-birth" class="canva-text text-right font-semibold"></dd>
@@ -159,11 +169,32 @@
     </div>
    </article>
   </template>
+  <div id="modal-termos" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
+    <div class="relative w-full max-w-lg rounded-2xl border border-white/10 bg-[#1a1a1a] p-8 shadow-2xl">
+      
+      <h3 class="text-2xl font-bold text-white mb-4">Termos de Uso e Privacidade</h3>
+      
+      <div class="space-y-3 text-sm text-white/80 leading-relaxed mb-6 max-h-60 overflow-y-auto pr-2">
+        <p>Ao se cadastrar na AMCN, você concorda com a coleta e o armazenamento dos dados fornecidos neste formulário (Nome, Data de Nascimento, seguimento e CPF).</p>
+        
+        <p><strong class="text-white">1. Finalidade:</strong> Os dados coletados têm caráter exclusivamente analítico e de identificação. Eles servem unicamente para distinguir os membros inscritos, criar a carteira de membro e auxiliar no gerenciamento interno da nossa comunidade.</p>
+        
+        <p><strong class="text-white">2. Uso e Compartilhamento:</strong> Garantimos que suas informações não serão utilizadas para nenhum outro fim além do escopo da inscrição. Seus dados não serão vendidos, cedidos ou compartilhados com terceiros.</p>
+        
+        <p><strong class="text-white">3. Segurança e Responsabilidade:</strong> A organização assume a responsabilidade pelo armazenamento e proteção dos seus dados, adotando as medidas necessárias para mantê-los seguros em nosso banco de dados fechado.</p>
+      </div>
+      <button type="button" id="fechar-termos" class="w-full rounded bg-lime-400 py-3 font-bold text-black transition-transform hover:-translate-y-0.5 hover:bg-lime-500">
+        Entendi e concordo
+      </button>
+    </div>
+  </div>
+
+  <!-- 2º Os scripts entram AQUI, sendo chamados apenas UMA vez no final -->
   <script src="app.js"></script>
   <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js');
-  }
-</script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
  </body>
 </html>

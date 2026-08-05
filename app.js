@@ -8,6 +8,7 @@ const successMessage = document.getElementById("success-message");
 const nameInput = document.getElementById("nome");
 const birthInput = document.getElementById("data-nascimento");
 const areaInput = document.getElementById("area-nerd");
+const cpfInput = document.getElementById("cpf");
 
 // 2. Elementos da "Nossa Party"
 const recordsSection = document.getElementById("records-section");
@@ -33,7 +34,8 @@ form.addEventListener("submit", (event) => {
   const novoMembro = {
     nome: nameInput.value,
     data: birthInput.value,
-    area: areaInput.value
+    area: areaInput.value,
+    cpf: cpfInput.value
   };
 
   let listaMembros = JSON.parse(localStorage.getItem("membrosAMCN")) || [];
@@ -90,66 +92,19 @@ function exibirMembro() {
     })
     .catch(erro => console.log("Erro ao carregar: ", erro));
 }
-// --- Passo 6: Lógica do Carrossel de Eventos ---
+// 6. Controle do Modal de Termos de Uso
+const btnAbrirTermos = document.getElementById("abrir-termos");
+const btnFecharTermos = document.getElementById("fechar-termos");
+const modalTermos = document.getElementById("modal-termos");
 
-// 1. Variáveis e Seletores
-const carousel = document.getElementById("event-carousel");
-const slides = carousel.querySelectorAll(".carousel-item");
-const prevBtn = document.getElementById("carousel-prev");
-const nextBtn = document.getElementById("carousel-next");
-const indicators = carousel.querySelectorAll(".indicator");
-let currentSlideIndex = 0; // Índice do slide visível inicialmente (o primeiro)
-let carouselInterval; // Variável para o intervalo automático
-
-// 2. Função para exibir um slide específico
-function showSlide(index) {
-  // Primeiro, oculta todos os slides e indicadores
-  slides.forEach((slide) => slide.classList.add("opacity-0"));
-  slides.forEach((slide) => slide.classList.remove("opacity-100"));
-  indicators.forEach((indicator) => indicator.classList.add("bg-white/40"));
-  indicators.forEach((indicator) => indicator.classList.remove("bg-white"));
-
-  // Depois, exibe apenas o slide do índice solicitado
-  slides[index].classList.remove("opacity-0");
-  slides[index].classList.add("opacity-100");
-  indicators[index].classList.remove("bg-white/40");
-  indicators[index].classList.add("bg-white");
-}
-
-// 3. Funções para próximo e anterior slide
-function nextSlide() {
-  currentSlideIndex = (currentSlideIndex + 1) % slides.length; // Avança e volta para 0 se chegar no fim
-  showSlide(currentSlideIndex);
-}
-
-function prevSlide() {
-  currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length; // Volta e vai para o fim se chegar no 0
-  showSlide(currentSlideIndex);
-}
-
-// 4. Funções para controlar a troca automática
-function startCarouselAutoPlay() {
-  // Define o intervalo (5000ms = 5 segundos)
-  carouselInterval = setInterval(nextSlide, 5000);
-}
-
-function stopCarouselAutoPlay() {
-  // Limpa o intervalo para parar a troca automática
-  clearInterval(carouselInterval);
-}
-
-// 5. Event Listeners (para os botões)
-nextBtn.addEventListener("click", () => {
-  stopCarouselAutoPlay(); // Para a troca automática ao clicar
-  nextSlide();
-  startCarouselAutoPlay(); // Reinicia o cronômetro
+// Quando clicar no texto verde, mostra a janela (tira o 'hidden' e coloca 'flex')
+btnAbrirTermos.addEventListener("click", () => {
+  modalTermos.classList.remove("hidden");
+  modalTermos.classList.add("flex");
 });
 
-prevBtn.addEventListener("click", () => {
-  stopCarouselAutoPlay();
-  prevSlide();
-  startCarouselAutoPlay();
+// Quando clicar em "Entendi", esconde a janela
+btnFecharTermos.addEventListener("click", () => {
+  modalTermos.classList.add("hidden");
+  modalTermos.classList.remove("flex");
 });
-
-// 6. Inicia o carrossel automático
-startCarouselAutoPlay();
