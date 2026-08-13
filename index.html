@@ -36,19 +36,36 @@
        <h1 id="page-title" data-template-id="page-title" class="canva-text brand-type font-bold leading-[1.08] tracking-tight">Junte-se à AMCN</h1>
        <p data-template-id="page-subtitle" class="canva-text mt-4 max-w-lg leading-relaxed"></p>
       </div>
-      <form id="registration-form" class="space-y-5">
+     <form id="registration-form" class="space-y-5">
+       
+       <!-- 1. Campo de Nome Completo -->
        <div>
         <label data-template-id="name-label" class="canva-text mb-2 block font-semibold" for="nome">Nome Completo</label>
         <div class="relative">
-         <i data-lucide="user-round" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <input data-template-id="name-input" class="canva-input field pl-12" id="nome" name="nome" type="text" autocomplete="name" maxlength="80" required>
+         <i data-lucide="user-round" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> 
+       <input data-template-id="name-input" class="canva-input field pl-12" id="nome" name="nome" type="text" autocomplete="name" maxlength="80" placeholder="Ex: Luke Skywalker" required>
         </div>
        </div>
+
+       <!-- 2. Campo: Como quer ser chamado -->
+       <div>
+        <label data-template-id="social-name-label" class="canva-text mb-2 block font-semibold" for="nome-social">Como quer ser chamado(a)?</label>
+        <div class="relative">
+         <i data-lucide="smile" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> 
+         <input class="field pl-12 canva-input" id="nome-social" name="nome_social" type="text" placeholder="Seu apelido, nick ou nome social" maxlength="50" required>
+        </div>
+       </div>
+
+       <!-- 3. Data de Nascimento -->
        <div>
         <label data-template-id="birth-label" class="canva-text mb-2 block font-semibold" for="data-nascimento">Data de Nascimento</label>
         <div class="relative">
-         <i data-lucide="calendar-days" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <input class="field pl-12" id="data-nascimento" name="data_nascimento" type="date" autocomplete="bday" required>
+         <i data-lucide="calendar-days" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> 
+         <input class="field pl-12" id="data-nascimento" name="data_nascimento" type="date" autocomplete="bday" required>
         </div>
-        <!-- Campo de CPF -->
+       </div>
+
+       <!-- 4. CPF -->
        <div>
         <label data-template-id="cpf-label" class="canva-text mb-2 block font-semibold" for="cpf">CPF</label>
         <div class="relative">
@@ -56,12 +73,29 @@
          <input class="field pl-12 canva-input" id="cpf" name="cpf" type="text" placeholder="000.000.000-00" required>
         </div>
        </div>
+
+       <!-- 5. Campo de Telefone / WhatsApp -->
+       <div>
+        <label data-template-id="phone-label" class="canva-text mb-2 block font-semibold" for="telefone">Telefone / WhatsApp</label>
+        <div class="relative">
+         <i data-lucide="smartphone" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> 
+         <input class="field pl-12 canva-input" id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" required>
+        </div>
+       </div>
        <div>
         <label data-template-id="area-label" class="canva-text mb-2 block font-semibold" for="area-nerd">Seu seguimento Nerd</label>
         <div class="relative">
          <i data-lucide="sparkles" aria-hidden="true" class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i> <select class="field appearance-none pl-12 pr-12" id="area-nerd" name="area_nerd" required> <option value="">Selecione uma área</option> <option value="E-Games">E-Games</option> <option value="Anime e mangá">Anime e mangá</option> <option value="Cinema e séries">Cinema e séries</option> <option value="Quadrinhos">Quadrinhos</option> <option value="Kpop">Kpop</option> <option value="RPG e boardgame">RPG e boardgame</option> <option value="Cosplay">Cosplay</option> <option value="Colecionáveis">Colecionáveis</option> <option value="Outra área">Outra área</option> </select> <i data-lucide="chevron-down" aria-hidden="true" class="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"></i>
         </div>
-        <!-- Caixinha de Termos de Uso -->
+
+        <!-- 6. Campo Aberto / Bio (Opcional) -->
+       <div>
+        <label data-template-id="bio-label" class="canva-text mb-2 block font-semibold" for="bio">Fale um pouco sobre você (Opcional)</label>
+        <div class="relative">
+         <i data-lucide="message-square" aria-hidden="true" class="pointer-events-none absolute left-4 top-4 h-5 w-5 text-slate-500"></i> 
+         <textarea class="field pl-12 pt-3 canva-input w-full" id="bio" name="bio" rows="3" placeholder="Sua história, o que gosta de jogar, assistir... o espaço é seu!"></textarea>
+        </div>
+       </div>
        <div class="flex items-start gap-3 mt-2">
         <div class="flex h-6 items-center">
          <input id="termos" name="termos" type="checkbox" required class="h-4 w-5 rounded border-white/20 bg-white/5 accent-lime-400 cursor-pointer">
@@ -88,16 +122,13 @@
      <div class="hero-image relative min-w-0 overflow-hidden">
       <img data-template-id="hero-image" class="canva-image absolute inset-0 h-full w-full object-cover" loading="lazy">
       <div class="image-shade absolute inset-0" aria-hidden="true"></div>
-      <!-- Nova caixa organizada: Título -> Parágrafo -> Bolinhas -->
       <div class="relative inset-x-0 bottom-0 p-8 md:p-12 z-20 flex flex-col items-center text-center justify-center min-h-[400px]">
         <h2 class="canva-text brand-type font-bold tracking-tight text-white text-4xl md:text-5xl mb-4 max-w-2xl">
           Toda paixão tem uma história. Qual é a sua?
         </h2>
-        
         <p class="text-white/80 text-lg leading-relaxed max-w-xl mb-6">
-          Games, anime, tecnologia, quadrinhos ou galáxias muito distantes: há espaço para todos.
-        </p>
-        
+          Games, animes, quadrinhos ou galáxias muito distantes: há espaço para todos.
+        </p>       
         <div class="flex justify-center gap-2 mt-4" aria-hidden="true">
           <span class="h-2 w-14 rounded-full bg-lime-300"></span>
           <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
@@ -165,17 +196,12 @@
    </article>
   </template>
   <div id="modal-termos" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-4">
-    <div class="relative w-full max-w-lg rounded-2xl border border-white/10 bg-[#1a1a1a] p-8 shadow-2xl">
-      
-      <h3 class="text-2xl font-bold text-white mb-4">Termos de Uso e Privacidade</h3>
-      
+    <div class="relative w-full max-w-lg rounded-2xl border border-white/10 bg-[#1a1a1a] p-8 shadow-2xl">      
+      <h3 class="text-2xl font-bold text-white mb-4">Termos de Uso e Privacidade</h3>      
       <div class="space-y-3 text-sm text-white/80 leading-relaxed mb-6 max-h-60 overflow-y-auto pr-2">
-        <p>Ao se cadastrar na AMCN, você concorda com a coleta e o armazenamento dos dados fornecidos neste formulário (Nome, Data de Nascimento, seguimento e CPF).</p>
-        
-        <p><strong class="text-white">1. Finalidade:</strong> Os dados coletados têm caráter exclusivamente analítico e de identificação. Eles servem unicamente para distinguir os membros inscritos, criar a carteira de membro e auxiliar no gerenciamento interno da nossa comunidade.</p>
-        
+        <p>Ao se cadastrar na AMCN, você concorda com a coleta e o armazenamento dos dados fornecidos neste formulário (Nome, Data de Nascimento, seguimento e CPF).</p>       
+        <p><strong class="text-white">1. Finalidade:</strong> Os dados coletados têm caráter exclusivamente analítico e de identificação. Eles servem unicamente para distinguir os membros inscritos, criar a carteira de membro e auxiliar no gerenciamento interno da nossa comunidade.</p>        
         <p><strong class="text-white">2. Uso e Compartilhamento:</strong> Garantimos que suas informações não serão utilizadas para nenhum outro fim além do escopo da inscrição. Seus dados não serão vendidos, cedidos ou compartilhados com terceiros.</p>
-        
         <p><strong class="text-white">3. Segurança e Responsabilidade:</strong> A organização assume a responsabilidade pelo armazenamento e proteção dos seus dados, adotando as medidas necessárias para mantê-los seguros em nosso banco de dados fechado.</p>
       </div>
       <button type="button" id="fechar-termos" class="w-full rounded bg-lime-400 py-3 font-bold text-black transition-transform hover:-translate-y-0.5 hover:bg-lime-500">
@@ -183,8 +209,6 @@
       </button>
     </div>
   </div>
-
-  <!-- 2º Os scripts entram AQUI, sendo chamados apenas UMA vez no final -->
   <script src="app.js"></script>
   <script>
     if ('serviceWorker' in navigator) {

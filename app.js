@@ -9,6 +9,9 @@ const nameInput = document.getElementById("nome");
 const birthInput = document.getElementById("data-nascimento");
 const areaInput = document.getElementById("area-nerd");
 const cpfInput = document.getElementById("cpf");
+const nomeSocialInput = document.getElementById("nome-social");
+const telefoneInput = document.getElementById("telefone");
+const bioInput = document.getElementById("bio");
 
 // 2. Elementos da "Nossa Party"
 const recordsSection = document.getElementById("records-section");
@@ -25,7 +28,7 @@ enterButton.addEventListener("click", () => {
 });
 
 // A nossa ponte para o Google Sheets
-const URL_DA_API = "https://script.google.com/macros/s/AKfycbxLHs9De0xPas96p1tjTSl8cuoKNDowINT7-w14dk-LbmVH6fNtHtZFwGSWV8qzslX75w/exec"; 
+const URL_DA_API = "https://script.google.com/macros/s/AKfycbz8nwqbaovC_LJX3HBNUlQa21FRMJxP385V0Vi9clyMbz2K82R-fOCZsmvVkOQE4pPL4Q/exec"; 
 
 // 4. Salva a LISTA na tela e envia para a NUVEM
 form.addEventListener("submit", (event) => {
@@ -33,9 +36,12 @@ form.addEventListener("submit", (event) => {
   
   const novoMembro = {
     nome: nameInput.value,
+    nomeSocial: nomeSocialInput.value,
     data: birthInput.value,
     area: areaInput.value,
-    cpf: cpfInput.value
+    cpf: cpfInput.value,
+    telefone: telefoneInput.value,
+    bio: bioInput.value
   };
 
   let listaMembros = JSON.parse(localStorage.getItem("membrosAMCN")) || [];
@@ -61,7 +67,7 @@ form.addEventListener("submit", (event) => {
     });
   }
 });
-// 5. Função que lê a lista da NUVEM e cria os perfis
+// 3. Função que lê a lista da NUVEM e cria os perfis
 function exibirMembro() {
   // Mostra um aviso enquanto a internet busca os dados
   recordList.innerHTML = "<p class='text-white'>Carregando membros da Party...</p>";
@@ -75,12 +81,16 @@ function exibirMembro() {
         emptyState.classList.add("hidden");
         recordCount.innerText = listaMembros.length; 
         
-        // Desenha cada cartão recebido da nuvem
+       // Desenha cada cartão recebido da nuvem
         listaMembros.forEach(membro => {
+          // Cria o HTML da bio apenas se ela existir
+          const bioHtml = membro.bio ? `<p class="text-sm text-white/80 mt-4 italic">"${membro.bio}"</p>` : '';
+
           recordList.innerHTML += `
             <div class="canva-panel p-6 rounded-xl border border-white/10 bg-white/5">
-              <h4 class="font-bold text-xl text-white">${membro.nome}</h4>
+              <h4 class="font-bold text-xl text-white">${membro.nomeSocial || membro.nome}</h4>
               <p class="text-sm font-bold tracking-widest uppercase mt-2" style="color: var(--lime);">${membro.area}</p>
+              ${bioHtml}
             </div>
           `;
         });
@@ -92,7 +102,7 @@ function exibirMembro() {
     })
     .catch(erro => console.log("Erro ao carregar: ", erro));
 }
-// 6. Controle do Modal de Termos de Uso
+// 4. Controle do Modal de Termos de Uso
 const btnAbrirTermos = document.getElementById("abrir-termos");
 const btnFecharTermos = document.getElementById("fechar-termos");
 const modalTermos = document.getElementById("modal-termos");
