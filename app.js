@@ -221,7 +221,7 @@ try {
                 }
             } else {
                 const senha = prompt("🔒 Digite a senha da diretoria da AMCN:");
-                if (senha === "amcn2026") {
+                if (senha === "Danielcabeçafina") {
                     sessionStorage.setItem('amcn_admin', 'true');
                     atualizarEstadoAdminUI();
                     if (lightbox && lightbox.style.display === 'flex' && fotoAtualId) {
