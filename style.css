@@ -1,3 +1,9 @@
+/* BLINDAGEM GLOBAL PARA IMAGENS NUNCA ESTOURAREM */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 :root {
     --ink: #070a12;
     --panel: #101522;
