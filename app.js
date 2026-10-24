@@ -129,20 +129,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. LÓGICA DA GALERIA E SUPABASE
     // ==========================================
 
-    const SUPABASE_URL = 'https://cnjdatpupuyteawhvnsxm.supabase.co'; // Sem barra no final!
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuamRhdHB1cHl0ZWF3aHZuc3htIxlmcm9sZSI6ImFub24iLCJpYXQiOjE3OTI4NTA3NjAsImV4cCI6MjEwODQyNjc2MH0.C8hy7E5A5RJp8QLfebO-AlJPl2Dyt4QjqTpPuMBf3g4';
+    const SUPABASE_URL = 'https://cnjdatpupyteawhvnsxm.supabase.co'; 
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_EOLJMw_2DAdSiQ6b-LQOXg_Qk64aq27';
 
-    let supabaseClient = null;
-    try {
-        if (typeof window.supabase !== 'undefined') {
-            supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-            console.log("☁️ Supabase conectado com sucesso!");
-        } else {
-            console.warn("⚠️ Biblioteca do Supabase não encontrada no escopo global.");
-        }
-    } catch (err) {
-        console.error("Erro ao iniciar Supabase:", err);
+let supabaseClient = null;
+try {
+    if (typeof window.supabase !== 'undefined') {
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+        console.log("☁️ Supabase conectado com sucesso!");
+    } else {
+        console.warn("⚠️ Biblioteca do Supabase não encontrada no escopo global.");
     }
+} catch (err) {
+    console.error("Erro ao iniciar Supabase:", err);
+}
 
     let fotosData = [];
     let fotoAtualId = null;
