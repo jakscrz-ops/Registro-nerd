@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
 
     const SUPABASE_URL = 'https://cnjdatpupuyteawhvnsxm.supabase.co'; // Sem barra no final!
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuamRhdHB1cHl0ZWF3aHZuc3htIxlmcm9sZSI6ImFub24iLCJpYXQiOjE3OTI4NTA3NjAsImV4cCI6MjEwODQyNjc2MH0.C8hy7E5A5RJp8QLfebO-AlJPl2Dyt4QjqTpPuMBf3g4';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNuamRhdHB1cHl0ZWF3aHZuc3htIxlmcm9sZSI6ImFub24iLCJpYXQiOjE3OTI4NTA3NjAsImV4cCI6MjEwODQyNjc2MH0.C8hy7E5A5RJp8QLfebO-AlJPl2Dyt4QjqTpPuMBf3g4';
 
     let supabaseClient = null;
     try {
